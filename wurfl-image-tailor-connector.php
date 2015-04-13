@@ -12,7 +12,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-    // Exit if accessed directly
+    // Exit if accessed directly.
 
     if ( ! defined( 'ABSPATH' ) ) {
 
