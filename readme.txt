@@ -3,19 +3,26 @@
 Contributors: nevma
 Donate link: http://example.com/
 Tags: wurfl, wit, cdn
-Requires at least: 3.0
+Requires at least: 4.0
 Tested up to: 4.1.1
 Stable tag: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Sets up the sources of your images so that they are served via the WURFL Image tailor service.
+Sets up the sources of your images so that they are served via the WURFL Image tailor service (WIT) http://web.wurfl.io/#wit.
 
 == Description ==
 
-WURFL Image Tailor (WIT) is an automatic image tailor based on WURFL device detection. WURFL will detect the device, and its screen size, resize and optimize the image accordingly. This plugin hooks automatically into the WordPress HTML image code generation process and changes the image src attributes so that they are delivered via the WURFL Image Tailor service.
+WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on ther WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size and it will resize and optimize the image accordingly. 
 
-Make sure you use functions like `the_post_thumbnail()` and `wp_get_attachment_image()` but NOT `wp_get_attachment_image_src()` because we cannot hook into it.
+This plugin hooks automatically into the WordPress HTML image code generation process and changes the image src attribute so that they are optimized and delivered via the WURFL Image Tailor service. It also filters the post contents to replace the images src attribute.
+
+Make sure you use functions like: 
+
+ - `the_post_thumbnail()`
+ - `wp_get_attachment_image()`
+
+However, do not `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
 
 == Installation ==
 
@@ -28,6 +35,10 @@ Make sure you use functions like `the_post_thumbnail()` and `wp_get_attachment_i
 = Is the WURFL Image Tailor service free? =
 
 So far yes it is, but refer to http://web.wurfl.io/#wit for more info on this. This plugin is in no way affiliated to the service itself. It is a simple connector.
+
+= Is the WURFL Image Tailor service stable? =
+
+Well, not totally. We have seen it producing 503 errors in some random cases.
 
 == Screenshots ==
 

@@ -1,14 +1,15 @@
 <?php
-/*
-Plugin Name: WURFL Image Tailor Connector for WordPress
-Plugin URI: http://www.nevma.gr
-Description: Sets up the sources of your images so that they are served via the WURFL Image tailor service.
-Version: 0.9
-Author: Nevma - Creative Know-How
-Author URI: http://www.nevma.gr
-License: GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-*/
+
+    /*
+        Plugin Name: WURFL Image Tailor Connector for WordPress
+        Plugin URI: http://www.nevma.gr
+        Description: Sets up the sources of your images so that they are served via the WURFL Image tailor service.
+        Version: 0.9.01
+        Author: Nevma - Creative Know-How
+        Author URI: http://www.nevma.gr
+        License: GPL2
+        License URI: https://www.gnu.org/licenses/gpl-2.0.html
+    */
 
 
 
@@ -22,11 +23,17 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
 
+    // The WURFL Image Tailor service endpoint url.
+
+    define( 'WURFL_URL', '//wit.wurfl.io/' );
+
+
+
     // Adds the WURFL Image Tailor to a given image source.
 
     function nwda_wurfl_image_src ( $src ) {
 
-        return '//wit.wurfl.io/' . $src;
+        return WURFL_URL . $src;
 
     }
 
@@ -48,7 +55,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
     function nwda_wurfl_content_filter ( $content ) {
 
-        return preg_replace( '/src="(.*)"/i', 'src="//wit.wurfl.io/${1}"', $content );
+        return preg_replace( '/src="(.*)"/i', 'src="' . WURFL_URL . '/${1}"', $content );
 
     }
 
