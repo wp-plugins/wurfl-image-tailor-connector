@@ -30,7 +30,7 @@ Make sure you use functions like:
 
 However, do not use `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
 
-Right now we hook into these WordPress filters:
+Right now it hooks into these WordPress filters:
 
  - wp_get_attachment_image_attributes
  - the_content
@@ -62,18 +62,21 @@ Well, not totally. We have seen it producing 503 errors in some random cases. Af
 
 == Screenshots ==
 
-No screenshots.
+1. Plugin is installed and activated.
+2. See how image sources are automatically delivered via the WURFL Image Tailor service.
+
+
 
 == Upgrade Notice ==
 
-No worries upgrading! 
+No worries upgrading. Just do it! 
 
 
 
 == Changelog ==
 
 = 0.9.04 =
-* Documentation enhancements. Added plugin banner.
+* Documentation enhancements. Added plugin banner and screenshots.
 
 = 0.9.03 =
 * Minor code enhancements.
