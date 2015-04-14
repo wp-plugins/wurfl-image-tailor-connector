@@ -1,4 +1,4 @@
-=== WURFL Image Tailor Connector for WordPress ===
+=== WURFL Image Tailor (WIT) Connector ===
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
@@ -30,7 +30,7 @@ Make sure you use functions like:
 
 However, do not use `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
 
-Right now it hooks into these WordPress filters:
+Right now the plugin hooks into these WordPress filters:
 
  - wp_get_attachment_image_attributes
  - the_content
@@ -39,9 +39,9 @@ Right now it hooks into these WordPress filters:
 
 == Installation ==
 
-No surprises here:
+= No surprises here: =
 
- 1. Install the plugin via the WordPress "Plugins > Add New" admin area or upload it to the "/wp-content/plugins/" directory.
+ 1. Install the plugin via "Plugins > Add New".
  2. Activate the plugin.
  3. It should simply work!
  4. De-activate the plugin to disable it.
@@ -63,7 +63,7 @@ Well, not totally. We have seen it producing 503 errors in some random cases. Af
 == Screenshots ==
 
 1. Plugin is installed and activated.
-2. See how image sources are automatically delivered via the WURFL Image Tailor service.
+2. Image sources are automatically delivered via the WURFL Image Tailor service.
 
 
 
@@ -76,16 +76,22 @@ No worries upgrading. Just do it!
 == Changelog ==
 
 = 0.9.04 =
-* Documentation enhancements. Added plugin banner and screenshots.
+
+ - Documentation enhancements. 
+ - Added plugin banner and screenshots.
 
 = 0.9.03 =
-* Minor code enhancements.
+
+ - Minor code enhancements.
 
 = 0.9.02 =
-* Minor code enhancements.
+
+ - Minor code enhancements.
 
 = 0.9.01 =
-* Minor code enhancements.
+
+ - Minor code enhancements.
 
 = 0.9 =
-* Plugin is working and published.
+
+ - Plugin is working and published.
