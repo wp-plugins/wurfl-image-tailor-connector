@@ -2,7 +2,7 @@
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
-Tags: wurfl, wit, cdn
+Tags: wurfl, wit, cdn, device detection, mobile
 Requires at least: 4.0
 Tested up to: 4.1.1
 Stable tag: 0.9.04
