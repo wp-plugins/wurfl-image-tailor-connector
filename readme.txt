@@ -15,9 +15,9 @@ Sets up the sources of your images so that they are served via the WURFL Image t
 
 == Description ==
 
-WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on ther WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size and it will resize and optimize the image accordingly. 
+WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on the WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size and it will resize and optimize each image accordingly. 
 
-This plugin hooks automatically into the WordPress HTML image code generation process and changes the image src attribute so that they are optimized and delivered via the WURFL Image Tailor service. 
+This plugin hooks automatically into the WordPress HTML image code generation process and changes each image's src attribute, so that they are optimized for that specific device and delivered via the WURFL Image Tailor service. 
 
 It also filters the post contents to replace the images src attribute. But it currently does this for all (!) images that it finds in the post contents.
 
@@ -25,10 +25,11 @@ It does not filter the href attribute of links that point to images in the media
 
 Make sure you use functions like: 
 
- - `the_post_thumbnail(...)`
- - `wp_get_attachment_image(...)`
+ - `the_post_thumbnail(&helip;)`
+ - `wp_get_attachment_image(&helip;)`
+ - `the_content(&helip;)`
 
-However, do not use `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
+However, do not use `wp_get_attachment_image_src()`, because we cannot hook into it (yet)!
 
 Right now the plugin hooks into these WordPress filters:
 
@@ -45,6 +46,7 @@ Right now the plugin hooks into these WordPress filters:
  2. Activate the plugin.
  3. It should simply work!
  4. De-activate the plugin to disable it.
+ 4. Activate the plugin to enable it.
 
 
 
@@ -63,7 +65,7 @@ Well, not totally. We have seen it producing 503 errors in some random cases. Af
 == Screenshots ==
 
 1. Plugin is installed and activated.
-2. Image sources are automatically delivered via the WURFL Image Tailor service.
+2. Images are automatically delivered via the WURFL Image Tailor service.
 
 
 
