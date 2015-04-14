@@ -1,11 +1,11 @@
 === WURFL Image Tailor Connector for WordPress ===
 
 Contributors: nevma
-Donate link: http://example.com/
+Donate link: http://www.nevma.gr/
 Tags: wurfl, wit, cdn
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 4.1
+Stable tag: 0.9.04
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,14 +17,23 @@ Sets up the sources of your images so that they are served via the WURFL Image t
 
 WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on ther WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size and it will resize and optimize the image accordingly. 
 
-This plugin hooks automatically into the WordPress HTML image code generation process and changes the image src attribute so that they are optimized and delivered via the WURFL Image Tailor service. It also filters the post contents to replace the images src attribute.
+This plugin hooks automatically into the WordPress HTML image code generation process and changes the image src attribute so that they are optimized and delivered via the WURFL Image Tailor service. 
+
+It also filters the post contents to replace the images src attribute. But it currently does this for all (!) images that it finds in the post contents.
+
+It does not filter the href attribute of links that point to images in the media gallery (yet).
 
 Make sure you use functions like: 
 
  - `the_post_thumbnail(...)`
  - `wp_get_attachment_image(...)`
 
-However, do not `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
+However, do not use `wp_get_attachment_image_src()` because we cannot hook into it (yet)!
+
+Right now we hook into these WordPress filters:
+
+ - wp_get_attachment_image_attributes
+ - the_content
 
 
 
@@ -32,9 +41,10 @@ However, do not `wp_get_attachment_image_src()` because we cannot hook into it (
 
 No surprises here:
 
- 1. Upload the plugin directory to the "/wp-content/plugins/" directory.
- 2. Activate the plugin through the 'Plugins' menu in WordPress.
- 3. It works! De-activate the plugin to disable it.
+ 1. Install the plugin via the WordPress "Plugins > Add New" admin area or upload it to the "/wp-content/plugins/" directory.
+ 2. Activate the plugin.
+ 3. It should simply work!
+ 4. De-activate the plugin to disable it.
 
 
 
@@ -61,6 +71,9 @@ No worries upgrading!
 
 
 == Changelog ==
+
+= 0.9.04 =
+* Documentation enhancements. Added plugin banner.
 
 = 0.9.03 =
 * Minor code enhancements.

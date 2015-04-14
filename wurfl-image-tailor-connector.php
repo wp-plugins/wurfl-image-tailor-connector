@@ -4,7 +4,7 @@
         Plugin Name: WURFL Image Tailor Connector for WordPress
         Plugin URI: http://www.nevma.gr
         Description: Sets up the sources of your images so that they are served via the WURFL Image tailor service.
-        Version: 0.9.03
+        Version: 0.9.04
         Author: Nevma - Creative Know-How
         Author URI: http://www.nevma.gr
         License: GPL2
