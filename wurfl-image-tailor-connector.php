@@ -13,7 +13,7 @@
 
 
 
-    // Exit if accessed directly.
+    // Exit if file is accessed directly.
 
     if ( ! defined( 'ABSPATH' ) ) {
 
@@ -29,7 +29,17 @@
 
 
 
-    // Adds the WURFL Image Tailor to a given image source.
+    /**
+     * Adds the WURFL Image Tailor service endpoint url to a given image source.
+     * 
+     * This function takes an image source url and it adds the WURFL Image Tailor service url in front of it so that
+     * the image will be served by it. The service will make sure that each device will receive a copy of the image
+     * relative to its screen size.
+     * 
+     * @param $src The url source of an image to pass through the WURFL Image Tailor service.
+     * 
+     * @return The new url of the image.
+     */
 
     function nwda_wurfl_image_src ( $src ) {
 
@@ -39,13 +49,24 @@
 
 
 
-    // Filters an image's attributes so as to add the WURFL Image Tailor to its source.
 
-    function nwda_wurfl_image_filter ( $attr ) {
+    /**
+     * Filters an image's attributes so as to add the WURFL Image Tailor to its source. 
+     * 
+     * The image's attributes are usually an array returned via functions like wp_get_attachment_image_src(). This 
+     * functions hooks into the wp_get_attachment_image_attributes filter in order to change the source url of the 
+     * given image as necessary.
+     * 
+     * @param $src The url source of an image to pass through the WURFL Image Tailor service.
+     * 
+     * @return The new url of the image.
+     */
 
-        $attr['src'] = nwda_wurfl_image_src( $attr['src'] );
+    function nwda_wurfl_image_filter ( $image_attr ) {
 
-        return $attr;
+        $image_attr['src'] = nwda_wurfl_image_src( $image_attr['src'] );
+
+        return $image_attr;
 
     }
 

@@ -31,8 +31,8 @@ Make sure you use functions like:
 
 However, do not use `wp_get_attachment_image_src()`, because we cannot hook into it (yet)! Right now the plugin hooks into these WordPress filters:
 
- - wp_get_attachment_image_attributes
- - the_content
+ - `wp_get_attachment_image_attributes`
+ - `the_content`
 
 
 
