@@ -25,9 +25,9 @@ The plugin also filters the post contents to replace the src attribute of images
 
 Make sure you use functions like: 
 
- - `the_post_thumbnail(&hellip;)`
- - `wp_get_attachment_image(&hellip;)`
- - `the_content(&hellip;)`
+ - `the_post_thumbnail(`&hellip;`)`
+ - `wp_get_attachment_image(`&hellip;`)`
+ - `the_content(`&hellip;`)`
 
 However, do not use `wp_get_attachment_image_src()`, because we cannot hook into it (yet)! Right now the plugin hooks into these WordPress filters:
 
