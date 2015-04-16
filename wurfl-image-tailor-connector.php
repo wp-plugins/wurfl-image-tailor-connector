@@ -4,7 +4,7 @@
         Plugin Name: WURFL Image Tailor (WIT) Connector
         Plugin URI: http://www.nevma.gr
         Description: Sets up the sources of your images so that they are served via the WURFL Image tailor service.
-        Version: 0.9.04
+        Version: 0.9.05
         Author: Nevma - Creative Know-How
         Author URI: http://www.nevma.gr
         License: GPL2
@@ -72,7 +72,16 @@
 
 
 
-    // Filters the HTML content of a post in order to redirect the sources of its images to WURFL Image Tailor.
+    /**
+     * Filters the HTML contents of a post in order to redirect the sources of its images to WURFL Image Tailor.
+     * 
+     * This functions takes the HTML contents of a post and filters it so that that the src attrbutes of images that
+     * are found in it are replaced in order to be redirected to the WURFL Image Tailor service.
+     * 
+     * @param $content The HTML contents of a post.
+     * 
+     * @return The post contents with image src attributes replaced.
+     */
 
     function nwda_wurfl_content_filter ( $content ) {
 

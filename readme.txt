@@ -2,10 +2,10 @@
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
-Tags: wurfl, wit, cdn, device detection, mobile
+Tags: wurfl, wit, cdn, device detection, mobile, image
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 0.9.04
+Stable tag: 0.9.05
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,11 @@ No worries upgrading. Just do it!
 
 
 == Changelog ==
+
+= 0.9.05 =
+
+ - Documentation enhancements. 
+ - Added empty index.php file for security.
 
 = 0.9.04 =
 
