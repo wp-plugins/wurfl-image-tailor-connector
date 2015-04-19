@@ -3,7 +3,7 @@
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
-Tags: wurfl, wit, cdn, device detection, mobile, images
+Tags: wurfl, wit, mobile, adaptive, images, resize, optimize, downsize
 Requires at least: 4.0
 Tested up to: 4.1.1
 Stable tag: 0.9.05
