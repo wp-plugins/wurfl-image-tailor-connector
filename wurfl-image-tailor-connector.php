@@ -49,7 +49,6 @@
 
 
 
-
     /**
      * Filters an image's attributes so as to add the WURFL Image Tailor to its source. 
      * 
