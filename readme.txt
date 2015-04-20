@@ -1,4 +1,4 @@
-=== WURFL Image Tailor (WIT) Connector ===
+=== WURFL Image Tailor (WIT) ===
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
