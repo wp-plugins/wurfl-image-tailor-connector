@@ -1,15 +1,17 @@
+
 === WURFL Image Tailor (WIT) ===
 
 Contributors: nevma
 Donate link: http://www.nevma.gr/
-Tags: wurfl, wit, cdn, device detection, mobile, image
+Tags: adaptive images, responsive images, mobile images, wurfl, wit, resize, optimize, downsize
 Requires at least: 4.0
-Tested up to: 4.1.1
+Tested up to: 4.1.2
 Stable tag: 0.9.06
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Sets up the sources of your images so that they are served via the WURFL Image tailor service (WIT) http://web.wurfl.io/#wit.
+Sets up the sources of your images so that they are served via the WURFL Image tailor service (WIT) 
+http://web.wurfl.io/#wit.
 
 
 
@@ -17,11 +19,16 @@ Sets up the sources of your images so that they are served via the WURFL Image t
 
 = Deliver downsized images to mobile devices =
 
-WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on the WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size and it will resize and optimize (downsize) each image accordingly. 
+WURFL Image Tailor (WIT) http://web.wurfl.io/#wit is an automatic image transformation and delivery service, based on 
+the WURFL device detection library http://web.wurfl.io/#learnmore. WURFL will detect the device, and its screen size 
+and it will resize and optimize (downsize) each image accordingly. 
 
-This plugin hooks automatically into the WordPress HTML image code generation process and changes each image's src attribute, so that it is optimized for that specific device and delivered via the WURFL Image Tailor service. 
+This plugin hooks automatically into the WordPress HTML image code generation process and changes each image's src 
+attribute, so that it is optimized for that specific device and delivered via the WURFL Image Tailor service. 
 
-The plugin also filters the post contents to replace the src attribute of images in it. But it currently does this for all (!) images that it finds in the post contents. Right now it does not replace the href attribute of links that point to images in the media gallery.
+The plugin also filters the post contents to replace the src attribute of images in it. But it currently does this for 
+all (!) images that it finds in the post contents. Right now it does not replace the href attribute of links that 
+point to images in the media gallery.
 
 Make sure you use functions like: 
 
@@ -29,14 +36,16 @@ Make sure you use functions like:
  - `wp_get_attachment_image(`&hellip;`)`
  - `the_content(`&hellip;`)`
 
-However, do not use `wp_get_attachment_image_src()`, because we cannot hook into it (yet)! Right now the plugin hooks into these WordPress filters:
+However, do not use `wp_get_attachment_image_src()`, because we cannot hook into it (yet)! Right now the plugin hooks 
+into these WordPress filters:
 
  - `wp_get_attachment_image_attributes`
  - `the_content`
 
  = Adaptive Images =
 
- Checkout Adaptive Images for WordPress https://wordpress.org/plugins/adaptive-images/.
+Also, checkout Adaptive Images for WordPress https://wordpress.org/plugins/adaptive-images/ a self-hosted, transparent
+mobile images solution.
 
 
 
@@ -56,7 +65,8 @@ However, do not use `wp_get_attachment_image_src()`, because we cannot hook into
 
 = Is the WURFL Image Tailor service free? =
 
-So far yes it is, but refer to http://web.wurfl.io/#wit for more info on this. This plugin is in no way affiliated to the service itself. It is a simple connector.
+So far yes it is, but refer to http://web.wurfl.io/#wit for more info on this. This plugin is in no way affiliated to 
+the service itself. It is a simple connector.
 
 = Is the WURFL Image Tailor service production ready? =
 
