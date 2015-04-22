@@ -6,7 +6,7 @@ Donate link: http://www.nevma.gr/
 Tags: adaptive images, responsive images, mobile images, wurfl, wit, resize, optimize, downsize
 Requires at least: 4.0
 Tested up to: 4.1.2
-Stable tag: 0.9.06
+Stable tag: 0.9.08
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ attribute, so that it is optimized for that specific device and delivered via th
 The plugin also filters the post contents to replace the src attribute of images in it. But it currently does this for 
 all (!) images that it finds in the post contents. Right now it does not replace the href attribute of links that 
 point to images in the media gallery.
+
+= Use WordPress functions and filters =
 
 Make sure you use functions like: 
 
@@ -89,6 +91,10 @@ No worries upgrading. Just do it!
 
 == Changelog ==
 
+= 0.9.06 =
+
+ - Documentation enhancements. 
+ 
 = 0.9.06 =
 
  - Documentation enhancements. 

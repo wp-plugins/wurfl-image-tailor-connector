@@ -4,7 +4,7 @@
         Plugin Name: WURFL Image Tailor (WIT)
         Plugin URI: http://www.nevma.gr
         Description: Sets up the sources of your images so that they are served via the WURFL Image tailor service.
-        Version: 0.9.06
+        Version: 0.9.08
         Author: Nevma - Creative Know-How
         Author URI: http://www.nevma.gr
         License: GPL2
