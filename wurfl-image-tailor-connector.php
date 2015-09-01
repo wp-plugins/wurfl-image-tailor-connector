@@ -75,8 +75,8 @@
     /**
      * Filters the HTML contents of a post in order to redirect the sources of its images to WURFL Image Tailor.
      * 
-     * This functions takes the HTML contents of a post and filters it so that that the src attrbutes of images that
-     * are found in it are replaced in order to be redirected to the WURFL Image Tailor service.
+     * This functions takes the HTML contents of a post and filters it so that that the src attributes of images that
+     * are found in it are replaced so that they can be redirected to the WURFL Image Tailor service.
      * 
      * @param $content The HTML contents of a post.
      * 
